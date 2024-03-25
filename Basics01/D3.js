@@ -23,8 +23,7 @@
 
 
  /* one more example*/
- /* ek baar review krna pdega kyuki undefined me value NaN aati hai but output 0 aa rha hai
- */
+ 
 // console.log("Example wih undefined:");
 //  const c = undefined;
 //  let d = Number(c);
@@ -66,9 +65,9 @@ let negValue = -value;
 // console.log("4" + 3 + 3);
 // console.log("4" + 8);
 // console.log(2 + "4");
-console.log(null + "4");
-console.log("4" + undefined);
-console.log(NaN + "4");
-console.log("4" + false);
+// console.log(null + "4");
+// console.log("4" + undefined);
+// console.log(NaN + "4");
+// console.log("4" + false);
 
-// string se phle conversion hoga but string ke baad string ki consider hoga
+// string se phle conversion hoga but string ke baad string hi consider hoga

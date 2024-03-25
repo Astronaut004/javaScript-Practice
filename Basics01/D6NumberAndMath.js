@@ -36,3 +36,4 @@ const max = 20;
 // or value ki range min se max ke beech me random number do
 // whereas max-min gives us random numebr
 console.log(Math.floor(Math.random()* (max-min - 1) + min));
+//ALL Done

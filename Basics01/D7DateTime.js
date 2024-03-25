@@ -18,7 +18,7 @@ console.log(MyDate.getDay())
 // here is Sat Mar 16 2024
 
 // console.log(`here is ${MyDate.toLocaleDateString}`);
-// here is function toLocaleDateString() { [native code] }
+// here is 25/03/2024
 
 // console.log(`here is ${MyDate.toLocaleString()}`);
 // here is 16/3/2024, 2:40:38 am
