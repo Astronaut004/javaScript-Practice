@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARENT AND CHILD</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="m">
+        <button onclick="action()"></button>
+    </div>
+</body>
+<script>
+    // function action()
+    // {
+    const newChild = document.createElement('p')
+    newChild.className = "main"
+    newChild.id = Math.round(Math.random() * 10 + 1);
+    newChild.setAttribute("title", "generated title")
+    newChild.style.backgroundColor = "green"
+    newChild.style.padding = "12px"
+    // newChild.innerText = "Hey Aryan"
+    const addText = document.createTextNode("Hey Aryan")
+    newChild.appendChild(addText)
+    const main = document.querySelector('.m')
+    main.appendChild(newChild)
+    console.log(newChild);
+    // }
+    
+</script>
+</html>

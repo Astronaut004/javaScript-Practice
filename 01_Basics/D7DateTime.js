@@ -3,7 +3,7 @@ const MyDate = new Date();
 console.log(MyDate.getDay())
 // console.log(MyDate);
 // 2024-03-15T21:10:38.667Z
-
+console.log(MyDate.toLocaleTimeString());
 // console.log(`here is: ${MyDate.toString()}`);
 // here is: Sat Mar 16 2024 02:40:38 GMT+0530 (India Standard Time)
 

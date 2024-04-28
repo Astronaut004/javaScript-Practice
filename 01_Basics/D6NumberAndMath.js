@@ -32,7 +32,7 @@ console.log(Math.floor(Math.random()*10) + 1);
 const min = 10;
 const max = 20;
 
-// ab mujhe random value chahiy or minimum random value 10 honi chaihy isme kamm nhi 
+// ab mujhe random value chahiy or minimum random value 10 honi chaihy isse kamm nhi 
 // or value ki range min se max ke beech me random number do
 // whereas max-min gives us random numebr
 console.log(Math.floor(Math.random()* (max-min - 1) + min));

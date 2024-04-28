@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .task {
+            /* background-color: rgb(141, 246, 246); */
+            padding: 2px;
+        }
+
+    </style>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <!-- <input type="text"> -->
+    <!-- <textarea name="message" id="Mytext" cols="30" rows="10"></textarea> -->
+    <p>Add your Task into your List</p>
+    <input style="height: 30px; width: 250px; text-align: center;" type="text" id="Mytext" placeholder="Enter Your Task and press ADD">
+    <button style="width: 100px; height: 30px; margin-left: 40px; border-radius: 20px; background-color: rgb(131, 102, 49,0); font-weight: bolder; color: white; cursor: pointer;" onclick="action()">ADD</button>
+    <div class="main"></div>    
+</body>
+<script>
+    function action() {
+        const value = document.querySelector('#Mytext').value;
+        // console.log(value);
+        if(value) {
+            const newChild = document.createElement('p');
+            newChild.className = "task";
+            const addText = document.createTextNode(value);
+            newChild.appendChild(addText)
+            document.querySelector('.main').appendChild(newChild)
+            document.querySelector('#Mytext').value = "";
+            console.log(newChild);
+        }
+    }
+</script>
+</html>

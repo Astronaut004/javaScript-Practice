@@ -1,0 +1,70 @@
+JavaScript Execution Context
+
+first Global Execution Context bnta hai usko this varaible me refer kr diya jata hai
+
+browser ka global execution context window hota hai
+
+Single threaded hai JavaScript
+
+Global Execution Context
+Function Execution Context
+Eval Execution Context
+
+phases to run js code
+
+1. creation phase or memory creation phase
+2. execution phase
+
+
+let var1 = 10
+let val2 = 5
+
+Function addNum(num1, num2) {
+    let total = num1 + num2
+    return total
+}
+let result1 = addNum(val1,val2)
+let result2 = addNum(10,2)
+
+++++++++++++++++execution++++++++++++++++++
+
+1. global execution
+2. memory phase
+            first cycle
+        val1 -> undefined
+        val2 -> undefined
+        addNum -> defination
+        result1 -> undefined
+        result2 -> undefined
+3. execution phase
+        
+        val1 = 10
+        val2 = 5
+        addNum me kuch nhi hoga kyuki kuch execution krne ke liy hai hi nhi
+        as it called by result1 ye apna alg execution context banata hai    
+        
+            new execution context
+        |-----------------------------------------------------
+        |                                                   |
+        |                                                   |
+        |   1. new variable environment                     |
+        |                                                   |
+        |                                                   |
+        |   2. execution Thread                             |
+        |                                                   |
+        |                                                   |
+        |                                                   |
+   |----|                                                   |
+   |    |-----|---------------------------------------------|    
+   |          \|/
+   |    memory phase 
+   |        val1 ->undefined
+   |        val2 ->undefined
+   |        total ->undefined
+   |-->   execution
+            num1 --> 10
+            num2 --> 5
+            total --> 15
+
+        total value return ho jata hai global execution phase me
+        ye apne kaam ke baat delte ho jata hai and result1 me value aa jati hai

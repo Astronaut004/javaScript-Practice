@@ -39,7 +39,7 @@ const cha = () => {
     // console.log(this.username); // undefined
     console.log(this); {}
 } 
-cha();
+// cha();
 
 /*
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ARROW FUNCTION++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -56,6 +56,7 @@ cha();
 
 const addTwo = (num1,num2) => ({username: "Aryan"}) // error without {}
 
+// without () error to nhi aayga but undefined aayga
 
 
 console.log(addTwo(3,4)) 
