@@ -72,7 +72,6 @@
     </div>    
 </body>
 <script>
-    let counter = 0,counter1=0;
 
     function action() {
         const value = document.querySelector('#Mytext').value;
@@ -86,17 +85,11 @@
             
             //edit
             const editButton = document.createElement('button');
-            editButton.className = "edit-btn"
-            let a = "p" + counter;
-            editButton.id = a;
             editButton.appendChild(document.createTextNode("Edit"));
             editButton.onclick = editOption;
             
             //delete
             const delButton = document.createElement('button');
-            delButton.className = 'del-btn';
-            a = "e" + counter1;
-            delButton.id = a;
             delButton.appendChild(document.createTextNode("Delete"));
             delButton.onclick = delOption;
 
@@ -106,9 +99,7 @@
             
             document.querySelector('.main').appendChild(newChild)
             document.querySelector('#Mytext').value = "";
-            // console.log(newChild);
-            counter++;
-            counter1++;
+
         }
     }
 
