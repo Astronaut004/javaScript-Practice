@@ -27,6 +27,10 @@ console.log(faltyyArray);
 
 console.log(Array.isArray("Aryan"));
 console.log(Array.from("Aryan"));
+/* `console.log(Array.from({name: "Aryan"}));` is attempting to convert an object `{name: "Aryan"}`
+into an array. However, `Array.from()` method expects an array-like or iterable object as its first
+argument, which the object `{name: "Aryan"}` is not. Therefore, this will result in an error or
+unexpected output. */
 console.log(Array.from({name: "Aryan"})); // important for interview revise it why it cannot convert into array
 
 let score1 = 100;

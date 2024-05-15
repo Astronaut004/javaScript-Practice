@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <button id="getData" style="font-size: 20px;">GET DATA FROM HERE</button>
+    <div class="card" style="width: 400px; height: 400px;"></div>
+</body>
+
+<script>
+    const requestUrl = "https://api.github.com/users/Astronaut004"
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestUrl);
+    let data;
+    xhr.onreadystatechange = () => {
+        data = JSON.parse(xhr.responseText);
+    }
+    xhr.send();
+
+    document.getElementById('getData').addEventListener('click',action,false);
+
+    function action() {
+        const target = document.querySelector(".card");
+        const newImage = document.createElement('img');
+        const newpara = document.createElement('p');
+        const newparaText = document.createTextNode(`Total followers: ${data.followers}`);
+
+        
+        newImage.src = data.avatar_url;
+        newpara.appendChild(newparaText);
+        target.appendChild(newImage);
+        target.appendChild(newpara);
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
