@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    0	UNSENT	Client has been created. open() not called yet.<br>
+    1	OPENED	open() has been called.<br>
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.<br>
+    3	LOADING	Downloading; responseText holds partial data.<br>
+    4	DONE	The operation is complete.
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/hiteshchoudhary";
+    const xhr = new XMLHttpRequest();
+    // XMLHttpRequest() it is a javaScript object that is used to make HTTP request to web servers, to enable communication between web browser and servers without loading entire page it allows dynamic updates to web pages, such as loading new content or submitting from data, without reuiring a full page reload. it commonly used in AJAX to create more interactive and responsive web applications.
+
+    xhr.open('GET',requestUrl)
+    // xhr.open('GET',requestUrl,true) default true hi hoti hai modern wen development me
+
+
+    /*
+                This method used to initialise a request. it specifies the type of request (e.g, GET or POST) and the URL
+                of resource to be fetched. 
+                Additionally it specify the request should be asynchronous or synchornous.
+                This method also sets up the request parameters before sending it to the server using the send() method
+    */
+//    onreadystatechange ye continusly monitor krta rhta hai 
+   xhr.onreadystatechange = function() {
+    console.log(xhr.readyState);
+    // maximum cases me respone string me aata hai
+    //  to hum usko JSON me convert kr skte hai using JSON.parse
+    if(xhr.readyState === 3) {
+        const data = JSON.parse(this.responseText);
+        console.log(typeof data);
+        console.log(data.avatar_url);
+    }
+   };
+
+    console.log(xhr.readyState);
+    xhr.send();
+
+
+</script>
+</html>

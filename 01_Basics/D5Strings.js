@@ -26,8 +26,12 @@ console.log(gameName.__proto__);
 // substring or slicing in javaScript
 
 console.log(gameName.substring(18,22));
-console.log(gameName.slice(0,4));
-// we can also use negative values with slicing 
+console.log(gameName.slice(0, 4));
+/* The `slice` method in JavaScript is used to extract a section of a string and
+return it as a new string without modifying the original string. It takes two
+parameters - the starting index and the ending index (optional). If the ending
+index is not provided, it extracts up to the end of the string. Negative values
+can also be used to slice from the end of the string. */ 
 console.log(gameName.slice(-20,22));
 
 
