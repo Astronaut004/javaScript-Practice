@@ -8,7 +8,7 @@
     3. false (default) doubt
 ```
 
-<!--
+```
     use onlick in html produce problem in large projects
 
     while if we select id in script and use onlick it is also a prolem
@@ -21,7 +21,7 @@
     3. false (default)2
     attachEvent() use when 
     jQuery
--->
+```
 
 <!--
     Interview question
@@ -35,12 +35,12 @@
     //altkey,ctrlkey,shiftkey,keycode
 -->
 
-<!--
-    event propogation ke 2 context hote hai 
+
+ ```   event propogation ke 2 context hote hai 
     event bubbling (default hota hai False) (market me yhi use hota hai)
     event bubbling -- > down to top jata hai
     event capturing (true) -- > ye jata hai top to bottom
     we stop propogation using
     e.stopPropogation()
     e.preventDefualt();
--->
+```
