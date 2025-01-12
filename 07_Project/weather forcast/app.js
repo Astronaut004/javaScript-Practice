@@ -4,7 +4,7 @@ const weather = document.querySelector("#weather");
 
 const getWeather = async (city) => {
     weather.innerHTML = `<h2>Loading Data...</h2>`;
-    const API_KEY = '192698a3e3e1170a18f988509d1fafa3';
+    const API_KEY = 'YOUR_KEY_BRO';
     try {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
         const response = await fetch(url);
